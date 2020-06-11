@@ -2,35 +2,13 @@
 
 @section('content')
 
-<div class="container d-flex flex-wrap py-5">
+<div class="container py-5">
 
-    <div class="card m-2" style="width: 18rem;">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        </div>
-    </div>
-
-    <div class="card m-2" style="width: 18rem;">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        </div>
-    </div>
-
-    <div class="card m-2" style="width: 18rem;">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        </div>
-    </div>
-
-    <div class="card m-2" style="width: 18rem;">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        </div>
-    </div>
+    @foreach ($artigos as $artigo)
+        <ul class="list-group">
+            <li class="list-group-item">{{ $artigo->nome }}</li>
+        </ul>
+    @endforeach
 
 </div>
 

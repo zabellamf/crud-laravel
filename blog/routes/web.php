@@ -13,15 +13,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('site.home');
-})->name('site.home');
-
-Route::get('/artigos', function () {
-    return view('site.artigos');
-})->name('site.artigos');
-
+Route::get('/', 'ArtigoController@listarArtigosPrincipais')->name('site.home');
+Route::get('/artigos', 'ArtigoController@listarArtigos')->name('site.artigos');
 
 Route::get('/novo', function () {
     return view('site.novo');
 })->name('site.novo');
+
+Route::post('/criar', 'ArtigoController@criar');
