@@ -14,14 +14,14 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
-})->('site.home');
+    return view('site.home');
+})->name('site.home');
 
 Route::get('/artigos', function () {
-    return view('artigos');
-})->('site.artigos');
+    return view('site.artigos');
+})->name('site.artigos');
 
 
 Route::get('/novo', function () {
-    return view('novo');
-})->('site.novo');
+    return view('site.novo');
+})->name('site.novo');
